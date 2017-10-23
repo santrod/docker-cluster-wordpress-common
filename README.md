@@ -1,0 +1,1 @@
+# docker_cluster_wordpress_common
