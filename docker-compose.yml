@@ -1,7 +1,13 @@
 version: "2"
 services:
   redis:
+    container_name: redis
     image: redis:4
 
   # postfix:
     # image
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
