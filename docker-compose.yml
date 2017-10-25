@@ -4,8 +4,17 @@ services:
     container_name: redis
     image: redis:4
 
-  # postfix:
-    # image
+  smtp:
+    image: namshi/smtp
+    environment:
+      SMARTHOST_ADDRESS=${SMARTHOST_ADDRESS}
+      SMARTHOST_PORT=${SMARTHOST_PORT}
+      SMARTHOST_USER=${SMARTHOST_USER}
+      SMARTHOST_PASSWORD=${SMARTHOST_PASSWORD}
+    volumes:
+      - /etc/postfix/main.cf:/etc/postfix/main.cf
+    ports:
+      - 587:587
 
 networks:
   default:
