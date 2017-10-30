@@ -1,1 +1,3 @@
-# docker_cluster_wordpress_common
+# Install proxy project
+
+Follow the [main project instructions](https://github.com/santrod/docker_cluster_wordpress_app)
